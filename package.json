@@ -1,7 +1,7 @@
 {
   "name": "@companydata/kbo-api",
-  "version": "0.1.0",
-  "description": "Belgian KBO/BCE register company data with full addresses, contacts and directors, through one REST call. A thin convenience layer over @companydata/companydata-sdk, pinned to BE.",
+  "version": "0.2.0",
+  "description": "KBO/BCE API wrapper: Belgian company data from the KBO/BCE (Crossroads Bank for Enterprises) with full addresses, phone, email, website and firmographics, through one REST call. A thin layer over @companydata/companydata-sdk, pinned to BE.",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -29,13 +29,21 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run clean && npm run typecheck && npm run build",
     "pack:check": "npm pack --dry-run",
-    "publish:public": "npm publish --access public"
+    "publish:public": "npm publish --access public",
+    "test:live": "npx -y tsx examples/quickstart.ts"
   },
   "keywords": [
+    "kbo",
+    "bce",
     "kbo-api",
-    "be",
+    "ondernemingsnummer",
+    "belgium",
+    "belgian",
+    "crossroads-bank",
     "company-data",
     "business-register",
+    "company-search",
+    "b2b-data",
     "sdk",
     "typescript"
   ],
